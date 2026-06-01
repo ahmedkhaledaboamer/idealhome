@@ -11,9 +11,9 @@ const MotionElement = <T extends React.ElementType = "div">({
   as = "div" as T,
   ...props
 }: MotionElementProps<T>) => {
-  const motionElements = motion as unknown as Record<string, ComponentType<unknown>>;
+  const motionElements = motion as unknown as Record<string, ComponentType<any>>;
   const Component = motionElements[as as string] ?? motion.div;
-  return <Component {...props} />;
+  return <Component {...(props as any)} />;
 };
 
 export default MotionElement;

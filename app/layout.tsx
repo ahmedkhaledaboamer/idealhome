@@ -1,7 +1,7 @@
 import { FloatingAgent } from "@/components/FloatingAgent";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { LocaleProvider } from "@/context/LocaleProvider";
+import { LocaleProvider, type Locale } from "@/context/LocaleProvider";
 import type { Metadata } from "next";
 import { Bebas_Neue, Cairo, Inter, Lexend } from "next/font/google";
 import { getMessages, getLocale } from "next-intl/server";
@@ -26,7 +26,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
+  const localeRaw = await getLocale();
+  const locale: Locale = localeRaw === "ar" ? "ar" : "en";
   const messages = await getMessages();
   const dir = locale === "ar" ? "rtl" : "ltr";
 

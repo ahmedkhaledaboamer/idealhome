@@ -9,7 +9,7 @@ import {
 } from "react";
 import type { Messages } from "next-intl";
 
-type Locale = "en" | "ar";
+export type Locale = "en" | "ar";
 type Direction = "ltr" | "rtl";
 
 const LocaleContext = createContext<
