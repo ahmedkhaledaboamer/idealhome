@@ -43,7 +43,7 @@ export function FloatingAgent() {
         {/* Avatar Image */}
         <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-brand-teal overflow-hidden shadow-2xl group-hover:scale-105 transition-transform duration-300 bg-brand-dark">
           <img
-            src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=2000&auto=format&fit=crop"
+            src="/assets/user/image.png"
             alt="Customer Service"
             className="w-full h-full object-cover"
           />
