@@ -1,0 +1,186 @@
+{
+  "nav": {
+    "service": "Our Service",
+    "projects": "Our Projects",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "cta": "Start Your Project"
+  },
+  "hero": {
+    "title1": "Design & Delivery of",
+    "title2": "Your Villa Interiors Made Simple",
+    "subtitle": "Kitchens, closets, doors, and premium uPVC windows designed, manufactured, and installed by one trusted Emirati factory.",
+    "cta": "Get Your FREE 3D Design Now"
+  },
+  "sol": {
+    "out": {
+      "1": "OUR",
+      "2": "INTERIOR",
+      "3": "SOLUTIONS"
+    },
+    "circle": {
+      "title": "Our Solutions",
+      "sub1": "We provide all type of modular",
+      "sub2": "KITCHEN, CLOSET, DOOR Services"
+    },
+    "grid": {
+      "kitchens": {
+        "title": "Kitchens",
+        "desc": "Custom-designed kitchens with premium materials and European craftsmanship, tailored for your villa."
+      },
+      "closets": {
+        "title": "Wardrobes & Closets",
+        "desc": "Smart wardrobe solutions with optimized storage and elegant finishes for every room."
+      },
+      "doors": {
+        "title": "Wooden Doors",
+        "desc": "Premium wooden doors crafted with precision, combining security with sophisticated design."
+      },
+      "windows": {
+        "title": "Premium Window Systems",
+        "desc": "High-performance uPVC window systems with superior insulation and modern aesthetics."
+      },
+      "cta": "Explore Our Projects"
+    }
+  },
+  "ourSolutions": {
+    "stroke1": "OUR",
+    "stroke2": "INTERIOR",
+    "stroke3": "SOLUTIONS",
+    "introTitle": "Our Solutions",
+    "introDescLine1": "We provide all types of integrated",
+    "introDescHighlight": "KITCHEN, CLOSET, DOOR Services",
+    "headerTitle": "Our Solutions",
+    "headerDescLine1": "We provide all types of integrated",
+    "headerDescHighlight": "KITCHEN, CLOSET, DOOR Services",
+    "cta": "Explore Our Projects",
+    "cards": {
+      "kitchens": {
+        "title": "Kitchens",
+        "desc": "Designed for daily use, built for long-term performance"
+      },
+      "closets": {
+        "title": "Wardrobes & Closets",
+        "desc": "Structured storage that stays organized over time"
+      },
+      "doors": {
+        "title": "Interior Doors",
+        "desc": "Precise finishes that hold up with everyday use"
+      },
+      "windows": {
+        "title": "Premium Window Systems",
+        "desc": "Sealed systems for better comfort and control"
+      }
+    }
+  },
+  "diff": {
+    "title": "Why Villa Interior Projects Often Become Difficult?",
+    "desc": "When interior systems are sourced from multiple suppliers, the process becomes fragmented, making it difficult to coordinate a consistent final result. The lack of commitment leads to:",
+    "prob1": "Quality Problems",
+    "prob2": "Delays during execution",
+    "prob3": "Poor value for money",
+    "prob4": "Weak after-sales support",
+    "app": {
+      "title": "The Ideal Factory\nApproach"
+    },
+    "app1": {
+      "title": "Multiple Interior Systems",
+      "desc": "One Factory. Kitchens, wardrobes, doors, and premium window systems manufactured together in one facility for coordinated villa interiors."
+    },
+    "app2": {
+      "title": "Coordinated Design",
+      "desc": "Our designers ensure that kitchens, closets, doors, & window systems complement each other in style & proportion."
+    },
+    "app3": {
+      "title": "After-Sales Support & Maintenance",
+      "desc": "Our team installs every product with precision to ensure the final result reflects the original design."
+    },
+    "app4": {
+      "title": "Precision Manufacturing & Installation",
+      "desc": "Manufactured in-house. Installed with precision. One accountable team."
+    }
+  },
+  "design": {
+    "title": "Design Your Villa Interiors  ",
+    "subtitle": " Before Spending a Dirham",
+    "desc": "Upload your villa floor plan and collaborate live with our designers to create a full 3D interior concept within an hour.",
+    "check1": "No guessing",
+    "check2": "No Expensive Redesigns",
+    "check3": "No Delays",
+    "cta": "Start Your 3D Interior Design",
+    "step1": "Upload Floor\nPlan",
+    "step2": "Get 3D Design",
+    "step3": "Live Design Edit"
+  },
+  "gal": {
+    "title": "Designed. Built. Delivered",
+    "all": "All",
+    "kitchen": "Kitchen",
+    "door": "Door",
+    "closet": "Closet",
+    "windows": "uPVC Windows",
+    "cta": "Explore Projects",
+    "projects": {
+      "kitchen1": {
+        "title": "Modern Kitchen",
+        "style": "Minimalist"
+      },
+      "door1": {
+        "title": "Entry Door",
+        "style": "Contemporary"
+      },
+      "closet1": {
+        "title": "Walk-in Closet",
+        "style": "Luxury"
+      },
+      "kitchen2": {
+        "title": "Island Kitchen",
+        "style": "Coastal"
+      },
+      "windows1": {
+        "title": "Villa Windows",
+        "style": "Modern"
+      },
+      "closet2": {
+        "title": "Wardrobe",
+        "style": "Bohemian"
+      }
+    }
+  },
+  "choose": {
+    "title": "Why Villa Owners Choose Ideal Factory",
+    "check1": "One factory for kitchens, wardrobes, doors, and premium window systems.",
+    "check2": "Fast 3D design before production",
+    "check3": "Precision manufacturing with European machinery",
+    "check4": "Solutions designed for UAE villas",
+    "cta": "Start Your Free 3D Design"
+  },
+  "test": {
+    "label": "Testimonials",
+    "title": "What They're Talking About Company ?",
+    "role": "Customer"
+  },
+  "contact": {
+    "badge": "Get in touch",
+    "title1": "Let's discuss your project!",
+    "desc": "Contact us today and learn more about how our interior fit out & custom manufacturing services can bring your ideas to life.",
+    "title2": "We Love to Hear From You",
+    "name": "Your Name",
+    "email": "Your Email",
+    "phone": "Phone Number",
+    "msg": "Message",
+    "submit": "Submit"
+  },
+  "footer": {
+    "desc": "Our kitchens may not be able to whisk you away to sun kissed foreign shores, but our collection boasts all the quality craftsmanship and style..",
+    "links": "Quick Links",
+    "explore": "Explore",
+    "contact": "Contact",
+    "copy": "Copyright ©2025 lumicore all rights reserved",
+    "terms": "Terms & Condition",
+    "privacy": "Privacy Policy"
+  },
+  "agent": {
+    "help": "Need help? Chat with us"
+  }
+}

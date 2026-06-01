@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  /* COLORS */
+  --color-brand-black: #000000;
+  --color-brand-light: #ffffff;
+  --color-brand-dark: #1E1E1E;
+  --color-brand-teal: #56B7BF;
+  --color-brand-muted: #797777;
+  --color-brand-muted-dark: #4d4a4a;
+  --color-brand-light: #d9d9d9;
+
+  /* FONTS */
+  --font-brand-sans: Inter, sans-serif;
+  --font-brand-heading: Lexend, sans-serif;
+  --font-brand-display: "Bebas Neue", sans-serif;
+  --font-brand-arabic: Cairo, sans-serif;
+}
+
+/* Hide scrollbar for clean horizontal scrolling if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
