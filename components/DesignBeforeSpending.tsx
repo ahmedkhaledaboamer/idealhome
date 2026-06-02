@@ -71,7 +71,7 @@ export function DesignBeforeSpending() {
                 {t("design.desc")}
               </p>
   
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+              <div className="grid grid-cols-1 md:grid-cols-3  sm:grid-cols-2 gap-4 mt-2">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-brand-teal shrink-0" />
                   <span className="text-base md:text-lg text-white">
@@ -105,7 +105,7 @@ export function DesignBeforeSpending() {
             </div>
   
             {/* Right Cards */}
-            <div className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-2 lg:w-1/2">
+            <div className="grid w-full gap-6 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-2 lg:w-1/2">
               {cards.map((card, i) => (
                 <MotionElement
                   key={i}
