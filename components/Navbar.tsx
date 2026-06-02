@@ -25,13 +25,13 @@ export function Navbar() {
         <div className="flex items-center gap-2 col-start-1">
           <button
             onClick={toggleLocale}
-            className="flex md:hidden items-center justify-center text-white/80 hover:text-white p-2 rounded-full border border-white/20 hover:border-white/40 transition-all"
+            className="flex lg:hidden items-center justify-center text-white/80 hover:text-white p-2 rounded-full border border-white/20 hover:border-white/40 transition-all"
             aria-label="Toggle language"
           >
             <Globe className="w-4 h-4" />
           </button>
 
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6">
             <a
               href="#services"
               className="text-white hover:text-brand-teal transition-colors text-sm font-medium"
@@ -77,7 +77,7 @@ export function Navbar() {
         <div className="flex items-center gap-3 justify-end col-start-3">
             <a
             href="#contact"
-            className="hidden md:inline-flex items-center gap-2 bg-brand-teal hover:bg-brand-teal/90 text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all"
+            className="hidden lg:inline-flex items-center gap-2 bg-brand-teal hover:bg-brand-teal/90 text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all"
           >
             <Phone className="w-4 h-4" />
             {t("nav.cta")}
@@ -85,7 +85,7 @@ export function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-white p-2"
+            className="lg:hidden text-white p-2"
             onClick={() => setOpen((s) => !s)}
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
@@ -96,7 +96,7 @@ export function Navbar() {
 
         {/* Mobile menu panel */}
         {open && (
-          <div className="md:hidden absolute inset-x-0 top-full mt-3 z-40 flex justify-center">
+          <div className="lg:hidden absolute inset-x-0 top-full mt-3 z-40 flex justify-center">
             <div className="w-[calc(100%-2rem)] bg-brand-black/95 backdrop-blur-md border border-brand-dark rounded-2xl p-4 flex flex-col items-center text-center gap-4">
               <a
                 href="#services"

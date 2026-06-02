@@ -70,129 +70,161 @@ export const OurSolutionSection = () => {
         if (card) gsap.set(card, { opacity: 0, y: 80, scale: 0.93 });
       });
 
-      const n = gsap.timeline({
-        defaults: { ease: "power2.inOut" },
-        scrollTrigger: {
-          trigger: t,
-          start: "top top",
-          end: "+=340%",
-          pin: true,
-          scrub: 0.55,
-          anticipatePin: 1,
-        },
-      });
+      const mm = gsap.matchMedia();
 
-      // Phase 0+1 linked: Stroke text disappears instantly while SVG scales in
-      n.to(
-        strokeTextRef.current,
-        { opacity: 0, duration: 0.15, ease: "power2.out" },
-        0,
-      )
-        // Fade out foreground background as stroke text disappears
-        .to(
-          foregroundBgRef.current,
-          { opacity: 0, duration: 0.5, ease: "power2.out" },
-          0,
-        )
-        // Fade in gradient overlay as stroke text disappears
-        .to(
-          gradientOverlayRef.current,
-          { opacity: 1, duration: 0.5, ease: "power2.out" },
-          0,
-        )
-        // SVG mask scales in (linked with Phase 0)
-        .to(
-          [maskGroupRef.current, textGroupRef.current],
-          {
-            scale: introScale,
-            svgOrigin: e,
-            duration: 2,
-            ease: "power2.out",
-          },
-          0,
-        )
-        .to(
-          textGroupRef.current,
-          { opacity: 1, duration: 0.45, ease: "power2.out" },
-          0,
-        )
-        // Phase 2: SVG mask scales out
-        .to(
-          [maskGroupRef.current, textGroupRef.current],
-          {
-            scale: exitScale,
-            svgOrigin: e,
-            duration: 2.9,
-            ease: "power2.inOut",
-          },
-          1.55,
-        )
-        .to(
-          [maskGroupRef.current, textGroupRef.current],
-          { opacity: 0, duration: 1.2, ease: "power1.out" },
-          3.65,
-        )
-        .to(
-          gradientOverlayRef.current,
-          { opacity: 0, duration: 1.2, ease: "power1.out" },
-          3.85,
-        )
-        // Phase 3: Solutions text appears
-        .to(
-          solutionsTextRef.current,
-          { opacity: 1, y: 0, duration: 0.9, ease: "power2.out" },
-          4.45,
-        )
-        .to(
-          solutionsTextRef.current,
-          { opacity: 0, y: -24, duration: 0.6, ease: "power2.in" },
-          5.65,
-        )
-        // Phase 4: Dark gradient + blur
-        .to(
-          darkGradientBgRef.current,
-          { opacity: 1, duration: 0.5, ease: "power2.out" },
-          6.05,
-        )
-        .to(
-          backgroundRef.current,
-          {
-            filter: "blur(8px)",
-            scale: 1.03,
-            duration: 0.8,
-            ease: "power2.out",
-          },
-          6.05,
-        )
-        // Phase 5: Header icon + title
-        .to(
-          headerIconRef.current,
-          { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
-          6.15,
-        )
-        .to(
-          headerTitleRef.current,
-          { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
-          6.2,
-        )
-        .to(
-          headerIconRef.current,
-          { opacity: 0, y: -12, duration: 0.45, ease: "power2.in" },
-          6.62,
-        )
-        // Phase 6: Cards animate in
-        .to(
-          cardsRef.current,
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.72,
-            stagger: 0.11,
-            ease: "power2.out",
-          },
-          6.72,
-        );
+      mm.add(
+        {
+          isDesktop: "(min-width: 1025px)",
+          isTablet: "(min-width: 769px) and (max-width: 1024px)",
+          isMobile: "(max-width: 768px)",
+        },
+        (context) => {
+          if (!context.conditions) {
+            console.log("conditions not found");
+            return;
+          }
+
+          const { isDesktop, isTablet, isMobile } = context.conditions;
+          console.log("isDesktop", isDesktop);
+          console.log("isTablet", isTablet);
+
+          const solutionsY = isDesktop ? 0 : isTablet ? -500 : -500;
+          const solutionHideY = isDesktop ? -28 : isTablet ? -500 : -500;
+
+          const n = gsap.timeline({
+            defaults: { ease: "power2.inOut" },
+            scrollTrigger: {
+              trigger: t,
+              start: "top top",
+              end: "+=340%",
+              pin: true,
+              scrub: 0.55,
+              anticipatePin: 1,
+            },
+          });
+
+          // Phase 0+1 linked: Stroke text disappears instantly while SVG scales in
+          n.to(
+            strokeTextRef.current,
+            { opacity: 0, duration: 0.15, ease: "power2.out" },
+            0,
+          )
+            .to(
+              foregroundBgRef.current,
+              { opacity: 0, duration: 0.5, ease: "power2.out" },
+              0,
+            )
+            .to(
+              gradientOverlayRef.current,
+              { opacity: 1, duration: 0.5, ease: "power2.out" },
+              0,
+            )
+            .to(
+              [maskGroupRef.current, textGroupRef.current],
+              {
+                scale: introScale,
+                svgOrigin: e,
+                duration: 2,
+                ease: "power2.out",
+              },
+              0,
+            )
+            .to(
+              textGroupRef.current,
+              { opacity: 1, duration: 0.45, ease: "power2.out" },
+              0,
+            )
+            // Phase 2: SVG mask scales out
+            .to(
+              [maskGroupRef.current, textGroupRef.current],
+              {
+                scale: exitScale,
+                svgOrigin: e,
+                duration: 2.9,
+                ease: "power2.inOut",
+              },
+              1.55,
+            )
+            .to(
+              [maskGroupRef.current, textGroupRef.current],
+              { opacity: 0, duration: 1.2, ease: "power1.out" },
+              3.65,
+            )
+            .to(
+              gradientOverlayRef.current,
+              { opacity: 0, duration: 1.2, ease: "power1.out" },
+              3.85,
+            )
+            // Phase 3: Solutions text appears (responsive y)
+            .to(
+              solutionsTextRef.current,
+              {
+                opacity: 1,
+                y: solutionsY,
+                duration: 0.9,
+                ease: "power2.out",
+              },
+              4.45,
+            )
+            .to(
+              solutionsTextRef.current,
+              {
+                opacity: 0,
+                y: solutionHideY,
+                duration: 0.6,
+                ease: "power2.in",
+              },
+              5.65,
+            )
+            // Phase 4: Dark gradient + blur
+            .to(
+              darkGradientBgRef.current,
+              { opacity: 1, duration: 0.5, ease: "power2.out" },
+              6.05,
+            )
+            .to(
+              backgroundRef.current,
+              {
+                filter: "blur(8px)",
+                scale: 1.03,
+                duration: 0.8,
+                ease: "power2.out",
+              },
+              6.05,
+            )
+            // Phase 5: Header icon + title
+            .to(
+              headerIconRef.current,
+              { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" },
+              6.15,
+            )
+            .to(
+              headerTitleRef.current,
+              { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
+              6.2,
+            )
+            .to(
+              headerIconRef.current,
+              { opacity: 0, y: -12, duration: 0.45, ease: "power2.in" },
+              6.62,
+            )
+            // Phase 6: Cards animate in
+            .to(
+              cardsRef.current,
+              {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.72,
+                stagger: 0.11,
+                ease: "power2.out",
+              },
+              6.72,
+            );
+
+          return () => {};
+        },
+      );
     },
     { scope: sectionRef },
   );
@@ -439,12 +471,11 @@ export const OurSolutionSection = () => {
         </svg>
         <div
           ref={solutionsTextRef}
-          className="pointer-events-none absolute inset-0 z-30 flex items-center justify-center px-6 text-center"
+          className="pointer-events-none absolute inset-0 z-30 flex items-center justify-center px-6 text-center translate-y-4 sm:translate-y-5 md:translate-y-[-100px] lg:translate-y-7"
           style={{
             translate: "none",
             rotate: "none",
             scale: "none",
-            transform: "translate(0px, 28px)",
             opacity: 0,
           }}
         >
@@ -534,6 +565,7 @@ export const OurSolutionSection = () => {
                 opacity: 0,
               }}
             >
+              dsdsads
               <img
                 alt="Ideal Factory Icon"
                 aria-hidden="true"
@@ -610,7 +642,7 @@ export const OurSolutionSection = () => {
                 ref={setCardRef}
               />
             ))}
-          </div> 
+          </div>
           <div className="mt-8 flex justify-center">
             <a
               className="inline-flex items-center gap-3 justify-center rounded-full bg-brand-teal px-6 py-3 text-base font-medium text-white shadow-md hover:bg-brand-teal/90 transition-all duration-200"
@@ -618,21 +650,21 @@ export const OurSolutionSection = () => {
               href="/projects"
             >
               <span className="px-2">{t("ourSolutions.cta")}</span>
-                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-4 w-4 text-white"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-             </a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-4 w-4 text-white"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
