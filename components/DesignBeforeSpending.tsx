@@ -60,34 +60,34 @@ export function DesignBeforeSpending() {
   
         {/* Content */}
         <div className="relative z-10">
-          <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="flex flex-col gap-12 lg:flex-row lg:items-start">
             {/* Left Content */}
-            <div className="flex-1 flex flex-col gap-6">
-              <h2 className="font-heading font-semibold text-4xl md:text-[32px] leading-tight text-white">
+            <div className="flex-1 flex flex-col gap-6 lg:w-1/2">
+              <h2 className="font-heading font-semibold text-3xl md:text-4xl lg:text-[42px] leading-tight text-white">
                 {t("design.title")} <br />  <span className="text-brand-teal"> {t("design.subtitle")}</span>
               </h2>
              
-              <p className="text-lg md:text-xl text-brand-light">
+              <p className="text-base md:text-lg lg:text-xl text-brand-light">
                 {t("design.desc")}
               </p>
   
-              <div className="grid grid-cols-2 gap-4 mt-2">
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-brand-teal" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-brand-teal shrink-0" />
                   <span className="text-base md:text-lg text-white">
                     {t("design.check1")}
                   </span>
                 </div>
   
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-brand-teal" />
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-brand-teal shrink-0" />
                   <span className="text-base md:text-lg text-white">
                     {t("design.check2")}
                   </span>
                 </div>
   
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-brand-teal" />
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-brand-teal shrink-0" />
                   <span className="text-base md:text-lg text-white">
                     {t("design.check3")}
                   </span>
@@ -105,14 +105,14 @@ export function DesignBeforeSpending() {
             </div>
   
             {/* Right Cards */}
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-2 lg:w-1/2">
               {cards.map((card, i) => (
                 <MotionElement
                   key={i}
                   whileHover={{
                     y: -5,
                   }}
-                  className="w-[180px] md:w-[220px] h-[220px] md:h-[260px] bg-white/10 backdrop-blur-lg border border-white/20 rounded-[20px] flex flex-col items-center justify-center gap-6 p-4"
+                  className="w-full aspect-square bg-white/10 backdrop-blur-lg border border-white/20 rounded-[20px] flex flex-col items-center justify-center gap-6 p-4"
                 >
                   <div className="w-20 h-20 rounded-full bg-brand-teal flex items-center justify-center">
                     <card.icon className="w-10 h-10 text-white" />
